@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Full_App.StationDataPage">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <StackLayout VerticalOptions="StartAndExpand">
+
+            <Label Text="Результати метеостанції"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="0,15,0,0"
+                   Scale="1.0"/>
+
+            <BoxView HeightRequest="3"
+                     HorizontalOptions="FillAndExpand"
+                     Color="GreenYellow"/>
+
+            <!-- Блок для температури з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 10, 10, 10">
+
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="Center">
+                    <Image Source="centigrade.png"
+                           WidthRequest="40"
+                           HeightRequest="35"/>
+                    <Label x:Name="temperatureLabel" Text="TEMPERATURE" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для вологості з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="humidity.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="humidityLabel" Text="HUMIDITY" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для вистоти над рівнем моря з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="altitude.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="altitudeLabel" Text="ALTITUDE" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для тиску з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="gauge.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="pressureLabel" Text="PRESSURE" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для статусу датчика GY-BMP280-3.3 з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="status.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="bmp280_statusLabel" Text="GY-BMP280-3.3 STATUS" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для статусу датчика DHT22 з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="status.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="dht22_statusLabel" Text="DHT22 STATUS" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Блок для отримання дати та часу з зображенням та текстом -->
+            <Frame CornerRadius="14"
+                   BorderColor="Gray"
+                   BackgroundColor="Transparent"
+                   Padding="15"
+                   Margin="10, 0, 10, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="time_passing.png" WidthRequest="40" HeightRequest="35"/>
+                    <Label x:Name="timestampLabel" Text="TIMESTAMP" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+        <Button x:Name="disconnectButton"
+                Text="Відключитися від метеостанції"
+                VerticalOptions="End"
+                HeightRequest="80"
+                FontSize="20"
+                Margin="10,0,10,20"
+                Clicked="OnDisconnectButtonClicked"/>
+
+    </StackLayout>
+
+</ContentPage>

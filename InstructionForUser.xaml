@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Full_App.InstructionForUser">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="FillAndExpand" Padding="30">
+            <Label Text="Інструкція для користувача"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            
+            <Label Text="Важливо: щоб отримувати дані з метеостанції ваш девайс має знаходитися в одній мережі Wi-Fi з метеостанцією."
+                   FontSize="16"
+                   FontAttributes="Italic"/>
+            <Label Text="Кроки для підключення навдено нижче"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,10"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Raspberry Pi 4"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+            <Label Text="1. Підключіть кабель живлення до метеостанції Raspberry Pi 4" />
+            <Label Text="2. З'єднайте вашу метео станцію кабелем HDMI з монітором" />
+            <Label Text="3. Перейдіть у розділ Wi-Fi як показано на фото" />
+
+            <Frame CornerRadius="10"
+                   Padding="0"
+                   HasShadow="False"
+                   Margin="0,10,0,10">
+                <Image Source="raspberry_wifi.png"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFit" />
+            </Frame>
+            
+            <Label Text="4. Знайдіть вашу маршрутизатор в списку і введіть пароль" />
+
+            <Frame CornerRadius="10"
+                   Padding="0"
+                   HasShadow="False"
+                   Margin="0,10,0,10">
+                <Image Source="raspberry_wifi_connect.png"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFit" />
+            </Frame>
+
+            <Label Text="5. Перезавантажте метеостанція і зачекайте близько 2 хвилин доки відбудуться автоматичні налаштування метеостанції Raspberry Pi 4" />
+
+            <Label Text="Android"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"
+                   FontSize="Large"/>
+            <Label Text="1. Переконайтеся що ви і ваша метеостанція і пристрій Android підключенні до однієї мережі Wi-Fi" />
+            
+            <Frame CornerRadius="10"
+                   Padding="0"
+                   HasShadow="False"
+                   Margin="0,10,0,10">
+                <Image Source="phone_wifi.jpg"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFit" />
+            </Frame>
+
+            <Label Text="2. Натисніть на кнопку &quot;Почати пошук&quot; і очікуйте, ваша станція буде знайдена за лічені секунди" />
+
+            <Frame CornerRadius="10"
+                   Padding="0"
+                   HasShadow="False"
+                   Margin="0,10,0,10">
+                <Image Source="phone_connect.jpg"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFit" />
+            </Frame>
+
+            <Label Text="3. Оберіть &quot;З'єднатися&quot;, після одразу буде отримано дані з метеостанції" />
+
+            <Frame CornerRadius="10"
+                   Padding="0"
+                   HasShadow="False"
+                   Margin="0,10,0,10">
+                <Image Source="phone_connect_done.jpg"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFit" />
+            </Frame>
+            <Label Text=" "/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

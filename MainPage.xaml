@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="Full_App.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" Spacing="15">
+
+        <!-- Заголовок "Пошук метеостанції Raspberry Pi" -->
+        <Label Text="Пошук метеостанції Raspberry Pi 4"
+               VerticalOptions="Start"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Margin="0,15,0,0"
+               Scale="1.0"/>
+
+        <BoxView HeightRequest="2.5"
+                 HorizontalOptions="FillAndExpand"
+                 Color="OrangeRed"/>
+
+        <!-- Посилання на сторінку з інструкцією -->
+        <Button Text="Інструкція для користувача"
+                VerticalOptions="End"
+                HeightRequest="65"
+                FontSize="20"
+                Margin="10,0,10,20"
+                Clicked="instructionClick"/>
+
+        <!-- Відтворення gif -->
+        <ffimageloading:CachedImage Source="loader.gif"
+                                    x:Name="animationView"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Aspect="AspectFit" />
+
+        <!-- Кнопка "Почати пошук" -->
+        <Button Text="Почати пошук"
+                VerticalOptions="End"
+                HeightRequest="80"
+                FontSize="20"
+                Margin="10,0,10,20"
+                Clicked="OnSearchButtonClicked"/>
+    </StackLayout>
+
+</ContentPage>
